@@ -32,9 +32,7 @@ function! SendCurrentLineToPdSend()
     " Determine the port based on the beginning of the message
     let port = "6004" " Default port
     if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
-        let port = "6004"  
-   " elseif current_line =~ '^vd_'
-       " let port = "6004"        
+        let port = "6004"        
     else
         " Default port if no match
         let port = "6000"

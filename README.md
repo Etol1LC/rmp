@@ -18,16 +18,18 @@ Also you'll need Vim.
 
 ## Basic Guide
 
-You have two main prefix for sending messages: vl an ex1. 
+You have two main prefix for sending messages: vl and p1 
 The vl prefix (volume) takes two parameters: 
 - Volume in db (0=loud, -100=no sound)
-- Time in ms to reach the volume
-The ex1 (expression1) prefix takes a bytebeat expression.
+- Time in ms to reach the target volume
+
+The p1 operator takes a float and controls the initial rate of the ramp
+
 
 ### Examples
 
 - vl -10 2000; (-10db in 2000ms)
-- ex1 t|t>>8; (bytebeat)
+- t|t>>8; (bytebeat expression)
 
 - Don't use spaces inside bytebeat expression.
 - Evaluate code with F2 

@@ -36,6 +36,7 @@ The p1 operator takes a float and controls the initial rate of the ramp
 - Don't use spaces inside bytebeat expression.
 - Evaluate code with F2 
 - Every message must end with ;
+- Remember, bytebeats can get very very loud. Always control the main volume and you can always go to no sound evaluating this line: vl -100 10; (keep this line at hand!!!)
 
 The cheat.rmp file already has a collection of expressions that I hope will help you start exploring bytebeat.
 

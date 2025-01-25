@@ -13,8 +13,8 @@ syntax on
 
 :echo ">>>^__^<<<\nWELCOME TO RMP!!!\n>>>^__^<<<"
 
-syntax keyword CommandsWord ex1 pn1 p1 vl
-syntax keyword VidCommandWord  vd_1 vel s_line s_fill vd_r
+syntax keyword CommandsWord p1 vl
+syntax keyword VidCommandWord  vd_1 vd_vel vd_sline vd_sfill vd_r
 syntax keyword ExpressionWord sin
 highlight CommandsWord ctermfg=Blue guifg=Blue
 highlight ExpressionWord ctermfg=Green guifg=Green
@@ -31,11 +31,13 @@ function! SendCurrentLineToPdSend()
     
     " Determine the port based on the beginning of the message
     let port = "6004" " Default port
-    if current_line =~ '^ex1'
-        let port = "6000"  
+    if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
+        let port = "6004"  
+   " elseif current_line =~ '^vd_'
+       " let port = "6004"        
     else
         " Default port if no match
-        let port = "6004"
+        let port = "6000"
     endif
     " Construct the pdsend command
     let command = 'echo ' . shellescape(current_line) . ' | sed "s/t/\$v1/g" | pdsend ' . port . ' ' . g:pdsend_host

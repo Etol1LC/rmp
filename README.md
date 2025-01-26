@@ -11,7 +11,7 @@ This is inspired and influenced by [Rampcode](https://github.com/gabochi/rampcod
 You need to have Pure Data installed with [ELSE](https://github.com/porres/pd-else) installed as well.
 Also you'll need Vim.
 
-- Download the folder an cd in into it.
+- Download the folder an cd into it.
 - Open the rmp.pd file in Pure Data.
 - Go to your terminal.
 - Execute rmp.sh (./rmp.sh) file and it will open up the cheat.rmp file in Vim. 

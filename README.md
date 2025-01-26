@@ -8,13 +8,12 @@ This is inspired and influenced by [Rampcode](https://github.com/gabochi/rampcod
 
 ## Installation and usage
 
-You need to have Pure Data installed with [ELSE](https://github.com/porres/pd-else) installed as well.
-Also you'll need Vim.
+You need to have Pure Data and Vim installed on your machine.
 
 - Download the folder an cd into it.
 - Open the rmp.pd file in Pure Data.
 - Go to your terminal.
-- Execute rmp.sh (./rmp.sh) file and it will open up the cheat.rmp file in Vim. 
+- Execute rmp.sh (./rmp.sh) file and it will open up the cheat.rmp file in Vim. In case you'd like to start from another file of your choice execute ./rmp.sh your_file_name.rmp and it will create a file in your working directory. 
 
 ## Basic Guide
 
@@ -28,12 +27,12 @@ The p1 operator takes a float and controls the initial rate of the ramp
 
 ### Examples
 
-- vl -10 2000; (-10db in 2000ms)
+- vl -10 2000; (get to -10db in 2000ms)
 - t|t>>8; (bytebeat expression)
 
 ### IMPORTANT:
 
-- Don't use spaces inside bytebeat expression.
+- Don't use spaces inside bytebeat expressions.
 - Evaluate code with F2 
 - Every message must end with ;
 - Remember, bytebeats can get very very loud. Always control the main volume and you can always go to no sound evaluating this line: vl -100 10; (keep this line at hand!!!)
@@ -42,4 +41,4 @@ The cheat.rmp file already has a collection of expressions that I hope will help
 
 ## Contact Information
 
-If you have any questions or suggestions, please contact Claudio Etol at claudiodonaggio83@gmail.com.
+If you have any questions or suggestions, please contact Claudio Donaggio (Etol) at claudiodonaggio83@gmail.com.

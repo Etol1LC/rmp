@@ -1,4 +1,10 @@
 #!/bin/sh
 
-######puredata $@ -nogui -stderr try.pd >/dev/null 2>&1 & PID=$! && LOGFILE=$LOGFILE
-vim --clean -c "source script/rconfig2.vim" projects/cheat.rmp; ##kill $PID
+# Check if an argument is provided and if it has a .rmp extension
+if [ "$#" -eq 1 ] && [ "${1##*.}" = "rmp" ]; then
+  FILE="$1"
+else
+  FILE="projects/cheat.rmp"
+fi
+
+vim --clean -c "source script/rconfig2.vim" "$FILE";

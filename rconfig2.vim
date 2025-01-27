@@ -15,7 +15,6 @@ syntax on
 
 syntax keyword CommandsWord p1 vl
 syntax keyword VidCommandWord  vd_1 vd_vel vd_sline vd_sfill vd_r
-
 " syntax keyword ExpressionWord sin
 syntax match Comment /#.*/ 
 highlight CommandsWord ctermfg=Blue guifg=Blue
@@ -36,8 +35,7 @@ function! SendCurrentLineToPdSend()
     if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
         let port = "6004"   
     elseif current_line=~ '^#' 
-        echo "--> comment" . current_line            
-
+        echo "--> comment" . current_line        
     else
         " Default port if no match
         let port = "6000"

@@ -56,6 +56,7 @@ Bytebeat music is generated from short programs, typically one line of code, whi
 ### Bytebeat Interpreters and Learning Resources:
 
 Here are some key resources for exploring bytebeat:
+
 - Greggman’s HTML5 Bytebeat Player: A web-based tool for creating and experimenting with bytebeats directly in your browser. [link](https://greggman.com/downloads/examples/html5bytebeat/html5bytebeat.html)
 - The Absolute Beginner's Guide to Coding Bytebeats: A comprehensive PDF guide for newcomers to bytebeat programming [link](https://nightmachines.tv/downloads/Bytebeats_Beginners_Guide_TTNM_v1-5.pdf)
 - ICMC Workshop on Bytebeat: Resources and lessons from a workshop on performing and teaching with bytebeat. [link](https://www.youtube.com/watch?v=FQHQpSyd7Cw&list=PLe4ojWnlX92OOrDhM8_yGIP9LNqSE_gR2)

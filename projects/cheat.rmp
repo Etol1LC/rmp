@@ -1,3 +1,4 @@
+
 #### put the cursor on the line you'd like to evaluate (either in insert or normal mode) and press <F2>
 
 vl -100 8000; # evaluate this to get to NO VOLUME
@@ -31,6 +32,7 @@ t*(t>>(13&t));
 (((t%(t>>1|t>>9))>>2)&t)-1;
 t<<((t>>8&t)|(t>>14&t));
 (t<<(t/(t>>8&t)));
+
 
 
 

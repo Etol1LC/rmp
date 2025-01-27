@@ -46,8 +46,6 @@ function! SendCurrentLineToPdSend()
     call system(command)
     " Notify user
     echo "--> (port " . port . "): " . current_line
-    " Force redraw to update the screen
-    " redraw!
 endfunction
 
 function FlashRegion()

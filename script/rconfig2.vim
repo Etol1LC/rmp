@@ -15,11 +15,12 @@ syntax on
 
 syntax keyword CommandsWord p1 vl
 syntax keyword VidCommandWord  vd_1 vd_vel vd_sline vd_sfill vd_r
-syntax keyword ExpressionWord sin
+" syntax keyword ExpressionWord sin
+syntax match Comment /#.*/ 
 highlight CommandsWord ctermfg=Blue guifg=Blue
-highlight ExpressionWord ctermfg=Green guifg=Green
+" highlight ExpressionWord ctermfg=Green guifg=Green
 highlight VidCommandWord ctermfg=Red guifg=Red
-highlight Symbol ctermfg=Green guifg=Green
+highlight Comment ctermfg=Green guifg=Green
 
 " Define the host for pdsend
 let g:pdsend_host = "localhost"
@@ -30,9 +31,11 @@ function! SendCurrentLineToPdSend()
     let current_line = getline('.')
     
     " Determine the port based on the beginning of the message
-    let port = "6004" " Default port
+    let port = "6005" " Default port
     if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
-        let port = "6004"        
+        let port = "6004"   
+    elseif current_line=~ '^#' 
+        echo "--> comment" . current_line        
     else
         " Default port if no match
         let port = "6000"

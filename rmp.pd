@@ -1,7 +1,7 @@
 #N canvas 564 66 305 188 12;
 #N canvas 677 252 450 300 sub 0;
 #X obj 0 0 r~ phas;
-#X obj 0 20 expr~ (($v1%($v1>>3&$v1>>8)&$v1)%256/2)+(($v1%($v1>>14|$v1>>1)&$v1)%256/2);
+#X obj 0 20 expr~ 0;
 #X obj 0 99 s~ out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -30,7 +30,7 @@
 #X connect 9 1 6 1;
 #X connect 10 0 6 1;
 #X restore 13 19 pd main-phas;
-#N canvas 0 98 1255 453 main-reciver 0;
+#N canvas 0 98 1255 453 main-reciver 1;
 #X obj 15 105 netreceive 6000;
 #X msg 15 183 \; pd-sub clear \, obj 0 0 r~ phas \, obj 0 20 expr~ \$1 \, obj 0 99 s~ out \, connect 0 0 1 0 \, connect 1 0 2 0 \;, f 20;
 #X obj 155 130 route ex1;
@@ -46,6 +46,8 @@
 #X obj 796 73 s sl;
 #X obj 851 79 s vd_r;
 #X obj 475 47 route pn1 vl vd_1 vd_vel p1 vd_sfill vd_sline vd_r, f 61;
+#X obj 1015 26 netreceive 6005;
+#X obj 1015 51 print;
 #X connect 0 0 3 0;
 #X connect 3 0 1 0;
 #X connect 4 0 14 0;
@@ -58,6 +60,7 @@
 #X connect 14 5 11 0;
 #X connect 14 6 12 0;
 #X connect 14 7 13 0;
+#X connect 15 0 16 0;
 #X restore 13 40 pd main-reciver;
 #N canvas 619 162 616 300 main-out 0;
 #X obj 7 213 *~;

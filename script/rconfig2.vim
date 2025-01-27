@@ -21,7 +21,7 @@ highlight ExpressionWord ctermfg=Green guifg=Green
 highlight VidCommandWord ctermfg=Red guifg=Red
 highlight Symbol ctermfg=Green guifg=Green
 
-" Define host for pdsend
+" Define the host for pdsend
 let g:pdsend_host = "localhost"
 
 " Function send the current line to pdsend

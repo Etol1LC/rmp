@@ -7,18 +7,13 @@ set smartindent
 set number
 set nowrap
 set smartcase
-" set cursorline
-" hi Cursorline cterm=NONE ctermbg=NONE guibg=NONE
-syntax on
 
 :echo ">>>^__^<<<\nWELCOME TO RMP!!!\n>>>^__^<<<"
 
 syntax keyword CommandsWord p1 vl
 syntax keyword VidCommandWord  vd_1 vd_vel vd_sline vd_sfill vd_r
-" syntax keyword ExpressionWord sin
 syntax match Comment /#.*/ 
 highlight CommandsWord ctermfg=Blue guifg=Blue
-" highlight ExpressionWord ctermfg=Green guifg=Green
 highlight VidCommandWord ctermfg=Red guifg=Red
 highlight Comment ctermfg=Green guifg=Green
 
@@ -46,8 +41,6 @@ function! SendCurrentLineToPdSend()
     call system(command)
     " Notify user
     echo "--> (port " . port . "): " . current_line
-    " Force redraw to update the screen
-    " redraw!
 endfunction
 
 function FlashRegion()

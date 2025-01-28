@@ -4,7 +4,7 @@ RMP is a ByteBeat system that allows you to live code and evaluate ByteBeat expr
 
 ## Description
 
-This is inspired and influenced by [Rampcode](https://github.com/gabochi/rampcode) by Gabriel Vinazza aka Gabo, it gives you more control over the overall volume and, for the moment, a way to pan the signal over the stereo field. It is also, at least in the way expressions are written, based on an "older" version of rampcode, before the beautiful but unusual and somehow scary Forth-like [RPN](https://en.m.wikipedia.org/wiki/Reverse_Polish_notation) (Reversed Polish Notation) was adopted. :)
+This is inspired and influenced by [Rampcode](https://github.com/gabochi/rampcode) by Gabriel Vinazza aka Gabo. It is also, at least in the way expressions are written, based on an "older" version of rampcode, before the beautiful but unusual and somehow scary Forth-like [RPN](https://en.m.wikipedia.org/wiki/Reverse_Polish_notation) (Reversed Polish Notation) was adopted. :)
 
 ## Installation and usage
 
@@ -35,7 +35,6 @@ Everything after an # symbol is a comment.
 
 ### IMPORTANT:
 
-- Don't use spaces inside bytebeat expressions.
 - Evaluate code with F2 
 - Every message must end with ;
 - Remember, bytebeats can get very very loud. Always control the main volume and you can always go to no sound evaluating this line: vl -100 10; (keep this line at hand!!!)
@@ -47,7 +46,7 @@ The cheat.rmp file already has a collection of expressions that I hope will help
 ### Historical Background:
 
 Bytebeat is a technique of algorithmic music that emerged from experiments by Finnish programmer Ville-Matias Heikkilä (aka Viznut). Although the concept could have been explored in the early 1950s, it gained popularity around 2011 when Viznut discovered that simple C programs could generate musical outputs when interpreted as raw audio data. This accidental discovery sparked a collaborative movement within the demoscene community, leading to the creation of a new electronic music subgenre.
-[article](https://cult.honeypot.io/reads/hack-your-way-to-music/)
+[link](https://cult.honeypot.io/reads/hack-your-way-to-music/)
 
 ### Technological Overview:
 
@@ -56,12 +55,11 @@ Bytebeat music is generated from short programs, typically one line of code, whi
 ### Bytebeat Interpreters and Learning Resources:
 
 Here are some key resources for exploring bytebeat:
-
 - Greggman’s HTML5 Bytebeat Player: A web-based tool for creating and experimenting with bytebeats directly in your browser. [link](https://greggman.com/downloads/examples/html5bytebeat/html5bytebeat.html)
 - The Absolute Beginner's Guide to Coding Bytebeats: A comprehensive PDF guide for newcomers to bytebeat programming [link](https://nightmachines.tv/downloads/Bytebeats_Beginners_Guide_TTNM_v1-5.pdf)
 - ICMC Workshop on Bytebeat: Resources and lessons from a workshop on performing and teaching with bytebeat. [link](https://www.youtube.com/watch?v=FQHQpSyd7Cw&list=PLe4ojWnlX92OOrDhM8_yGIP9LNqSE_gR2)
 - Rampcode (bytebeat in Pure data... yes RMP is actually based on this...) [link](https://github.com/gabochi/rampcode)
-- An article on bytebeat by Gabriel Vinazza. [link](https://blog.toplap.org/2020/02/17/bytebeat-floatbeat-rampcode/)
+- An article on bytebeat by Gabriel Vinazza published on [TopLap](https://blog.toplap.org/). [link](https://blog.toplap.org/2020/02/17/bytebeat-floatbeat-rampcode/)
 
 ## Contact Information 
 

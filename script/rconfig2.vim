@@ -12,9 +12,7 @@ set smartcase
 
 syntax keyword CommandsWord p1 vl
 syntax keyword VidCommandWord  vd_1 vd_vel vd_sline vd_sfill vd_r
-
 syntax match Comment /#.*/ 
-
 highlight CommandsWord ctermfg=Blue guifg=Blue
 highlight VidCommandWord ctermfg=Red guifg=Red
 highlight Comment ctermfg=Green guifg=Green
@@ -28,21 +26,24 @@ function! SendCurrentLineToPdSend()
     let current_line = getline('.')
     
     " Determine the port based on the beginning of the message
-
     let port = "6005" " Default port
     if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
         let port = "6004"   
     elseif current_line=~ '^#' 
         echo "--> comment" . current_line        
-
     else
         " Default port if no match
         let port = "6000"
     endif
     " Construct the pdsend command
     let command = 'echo ' . shellescape(current_line) . ' | sed "s/t/\$v1/g" | pdsend ' . port . ' ' . g:pdsend_host
+    if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
     " Execute the command
     call system(command)
+    else 
+    let command = 'echo ' . shellescape(current_line) . ' | sed "s/t/\$v1/g" | sed "s/ //g"| pdsend ' . port . ' ' . g:pdsend_host
+    call system(command)
+    endif
     " Notify user
     echo "--> (port " . port . "): " . current_line
 endfunction

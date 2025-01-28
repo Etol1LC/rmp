@@ -41,8 +41,13 @@ function! SendCurrentLineToPdSend()
     endif
     " Construct the pdsend command
     let command = 'echo ' . shellescape(current_line) . ' | sed "s/t/\$v1/g" | pdsend ' . port . ' ' . g:pdsend_host
+    if current_line =~ '^vl' || current_line =~'vd_' || current_line =~'p1'
     " Execute the command
     call system(command)
+    else 
+    let command = 'echo ' . shellescape(current_line) . ' | sed "s/t/\$v1/g" | sed "s/ //g"| pdsend ' . port . ' ' . g:pdsend_host
+    call system(command)
+    endif
     " Notify user
     echo "--> (port " . port . "): " . current_line
 endfunction
@@ -66,4 +71,5 @@ nnoremap <F2> :call SendandHighlight()<CR>
 
 " Map the F2 key to call the SendAndHighlightCurrentLine function in insert mode
 inoremap <F2> <C-o>:call SendandHighlight()<CR>
+
 

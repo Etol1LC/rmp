@@ -8,7 +8,9 @@ This is inspired and influenced by [Rampcode](https://github.com/gabochi/rampcod
 
 ## Installation and usage
 
-You need to have Pure Data and Vim installed on your machine.
+You need to have Pure-Data Vanilla installed on your machine.
+In order to use the visualizer included, you'll need also GEM and ELSE installed.
+Currently is only been tested on Linux. 
 
 - Download the folder an cd into it.
 - Open the rmp.pd file in Pure Data.
@@ -17,6 +19,8 @@ You need to have Pure Data and Vim installed on your machine.
 
 ## Basic Guide
 
+### Bytebeat 
+
 You have two main "operators": vl and p1 
 
 The vl operator (volume) takes two parameters: 
@@ -24,6 +28,17 @@ The vl operator (volume) takes two parameters:
 - Time in ms to reach the target volume
 
 The p1 operator takes a float or an integer and controls the initial rate of the ramp.
+By using arrow up you get the history of the commands previously evaluated. 
+
+### Visuals:
+
+The visuals consist of a simple scope. You can control the "style" of the scope from inside the repl evaluating the following commands: 
+- vd_1; (open and close GEM window)
+- vd_red;
+- vd_green;
+- vd_white; 
+- vd_blue;
+- vd_rcolor; (random color)
 
 ### Examples
 

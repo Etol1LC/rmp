@@ -1,7 +1,8 @@
 #N canvas 810 35 257 202 12;
+#X declare -lib Gem;
 #N canvas 677 252 450 300 sub 0;
 #X obj 0 0 r~ phas;
-#X obj 0 20 expr~ ($v1|($v1*($v1/3000))<<($v1/300));
+#X obj 0 20 expr~ 0;
 #X obj 0 99 s~ out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -185,6 +186,7 @@
 #X obj 344 400 * 359;
 #X obj 454 328 metro 100;
 #X obj 445 292 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 724 0 declare -lib Gem;
 #X connect 0 0 1 0;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
